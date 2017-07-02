@@ -1,0 +1,17 @@
+create table if not exists temperature_data
+(
+date date,
+unit string,
+zip int,
+temperature int
+)
+row format delimited
+fields terminated by ',';
+
+
+LOAD DATA 
+LOCAL INPATH '/home/acadgild/hive/emp_details.txt'
+INTO TABLE emp_details;
+
+
+
